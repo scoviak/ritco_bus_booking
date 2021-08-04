@@ -14,10 +14,10 @@
     <?php session_start() ?>
     <?php
 
-    header('index.php?page=home');
-    include 'header.php'; ?>
+    header('./index.php?page=home');
+    include './header.php'; ?>
     <?php if (isset($_SESSION['login_id'])) include 'admin_navbar.php';
-    else include 'navbar.php'; ?>
+    else include './navbar.php'; ?>
 
     <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body text-white">
@@ -26,9 +26,9 @@
 
     <?php
     if (isset($_GET['page']) && !empty($_GET['page']))
-        include($_GET['page'] . '.php');
+        include('./' . $_GET['page'] . '.php');
     else
-        include('home.php');
+        include('./home.php');
 
     ?>
 
@@ -104,7 +104,7 @@
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 <script>
@@ -166,7 +166,6 @@ window.alert_toast = function($msg = 'TEST', $bg = 'success') {
         delay: 3000
     }).toast('show');
 }
-$(document).ready(function() {})
 </script>
 
 </html>

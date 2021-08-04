@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <?php include('header.php') ?>
+    <?php include('./header.php') ?>
     <?php
     // session_start();
     // if(isset($_SESSION['login_id'])){
@@ -13,7 +13,7 @@
 </head>
 <style>
 body {
-    background-image: url(./assets/img/bus.jpg);
+    background-image: url("./assets/img/bus.jpg");
     height: 96vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,32 +51,28 @@ body {
 
 <script>
 $(document).ready(function() {
-    $('#login-frm').submit(function(e) {
-        e.preventDefault()
-        $('#login-frm button').attr('disable', true)
-        $('#login-frm button').html('Please wait...')
-
+    $("#login-frm").submit(function(e) {
+        e.preventDefault();
+        $('#login-frm button').attr('disable', true);
+        $('#login-frm button').html('Please wait...');
         $.ajax({
             url: './login_auth.php',
             method: 'POST',
             data: $(this).serialize(),
             error: err => {
-                console.log(err)
-                alert('An error occured');
-                $('#login-frm button').removeAttr('disable')
-                $('#login-frm button').html('Login')
+                $('#login-frm button').removeAttr('disable');
+                $('#login-frm button').html('Login');
             },
             success: function(resp) {
                 if (resp == 1) {
-                    location.replace('index.php?page=home')
+                    location.replace('index.php?page=home');
                 } else {
-                    alert("Incorrect username or password.")
-                    $('#login-frm button').removeAttr('disable')
-                    $('#login-frm button').html('Login')
+                    alert("Incorrect username or password.");
+                    $('#login-frm button').removeAttr('disable');
+                    $('#login-frm button').html('Login');
                 }
             }
         })
-
     })
 })
 </script>
