@@ -14,7 +14,7 @@
     <?php session_start() ?>
     <?php
 
-    header('./index.php?page=home');
+    header('./home.php');
     include './header.php';
     ?>
     <?php if (isset($_SESSION['login_id'])) include 'admin_navbar.php';
