@@ -1,8 +1,8 @@
  <section id="bg-bus" class="d-flex align-items-center">
-     <div class="container">
+     <div class="container text-center">
          <?php if (!isset($_SESSION['login_id'])) { ?>
          <h1>Welcome to RITCO Bus Ticket Booking Platform</h1><br /><br />
-         <center><button class="btn btn-info btn-lg" type="button" id="book_now">Book Now</button></center>
+         <button class="btn btn-info btn-lg" type="button" id="book_now">Book Now</button>
          <?php
             } else {
             ?>
