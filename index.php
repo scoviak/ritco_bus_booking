@@ -91,9 +91,9 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
 
-        <div class="container-fluid d-md-flex py-4">
+        <div class="container-fluid d-md-flex py-4 justify-content-center">
 
-            <div class="mr-md-auto text-center text-md-left">
+            <div class="align-self-center">
                 <div class="copyright">
                     &copy; Copyright 2021 | <strong><span><a href="https://ritco.rw/"
                                 target="_blank">RITCO</a></span></strong>. All Rights Reserved
